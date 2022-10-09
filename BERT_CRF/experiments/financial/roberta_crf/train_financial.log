@@ -1,0 +1,87 @@
+2022-09-26 12:46:32,233:INFO: device: cuda:0
+2022-09-26 12:46:32,233:INFO: --------Process Done!--------
+2022-09-26 12:46:32,466:INFO: Model name '../pretrained_bert_models/bert-base-chinese/' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '../pretrained_bert_models/bert-base-chinese/' is a path or url to a directory containing tokenizer files.
+2022-09-26 12:46:32,467:INFO: Didn't find file ../pretrained_bert_models/bert-base-chinese/added_tokens.json. We won't load it.
+2022-09-26 12:46:32,467:INFO: Didn't find file ../pretrained_bert_models/bert-base-chinese/special_tokens_map.json. We won't load it.
+2022-09-26 12:46:32,467:INFO: Didn't find file ../pretrained_bert_models/bert-base-chinese/tokenizer_config.json. We won't load it.
+2022-09-26 12:46:32,467:INFO: loading file ../pretrained_bert_models/bert-base-chinese/vocab.txt
+2022-09-26 12:46:32,467:INFO: loading file None
+2022-09-26 12:46:32,467:INFO: loading file None
+2022-09-26 12:46:32,467:INFO: loading file None
+2022-09-26 12:46:44,370:INFO: Model name '../pretrained_bert_models/bert-base-chinese/' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '../pretrained_bert_models/bert-base-chinese/' is a path or url to a directory containing tokenizer files.
+2022-09-26 12:46:44,371:INFO: Didn't find file ../pretrained_bert_models/bert-base-chinese/added_tokens.json. We won't load it.
+2022-09-26 12:46:44,371:INFO: Didn't find file ../pretrained_bert_models/bert-base-chinese/special_tokens_map.json. We won't load it.
+2022-09-26 12:46:44,371:INFO: Didn't find file ../pretrained_bert_models/bert-base-chinese/tokenizer_config.json. We won't load it.
+2022-09-26 12:46:44,371:INFO: loading file ../pretrained_bert_models/bert-base-chinese/vocab.txt
+2022-09-26 12:46:44,371:INFO: loading file None
+2022-09-26 12:46:44,371:INFO: loading file None
+2022-09-26 12:46:44,371:INFO: loading file None
+2022-09-26 12:46:45,070:INFO: --------Dataset Build!--------
+2022-09-26 12:46:45,070:INFO: --------Get Dataloader!--------
+2022-09-26 12:46:45,070:INFO: loading configuration file ../pretrained_bert_models/chinese_roberta_wwm_large_ext/config.json
+2022-09-26 12:46:45,070:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-12,
+  "lstm_dropout_prob": 0.5,
+  "lstm_embedding_size": 1024,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "num_labels": 4,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 21128
+}
+
+2022-09-26 12:46:45,071:INFO: loading weights file ../pretrained_bert_models/chinese_roberta_wwm_large_ext/pytorch_model.bin
+2022-09-26 12:46:50,383:INFO: Weights of BertNER not initialized from pretrained model: ['classifier.weight', 'classifier.bias', 'crf.start_transitions', 'crf.end_transitions', 'crf.transitions']
+2022-09-26 12:46:50,384:INFO: Weights from pretrained model not used in BertNER: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2022-09-26 12:46:51,856:INFO: --------Start Training!--------
+2022-09-26 12:55:22,425:INFO: Epoch: 1, train loss: 89.64226280095923
+2022-09-26 12:55:34,759:INFO: Epoch: 1, dev loss: 65.02856567225506, f1 score: 0.5847563515201999
+2022-09-26 12:55:34,760:INFO: Configuration saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/config.json
+2022-09-26 12:55:36,384:INFO: Model weights saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/pytorch_model.bin
+2022-09-26 12:55:36,384:INFO: --------Save best model!--------
+2022-09-26 13:04:11,793:INFO: Epoch: 2, train loss: 51.28551214419898
+2022-09-26 13:04:23,807:INFO: Epoch: 2, dev loss: 52.42909720509323, f1 score: 0.6802385358831996
+2022-09-26 13:04:23,808:INFO: Configuration saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/config.json
+2022-09-26 13:04:25,494:INFO: Model weights saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/pytorch_model.bin
+2022-09-26 13:04:25,494:INFO: --------Save best model!--------
+2022-09-26 13:12:55,599:INFO: Epoch: 3, train loss: 34.145121240563846
+2022-09-26 13:13:07,869:INFO: Epoch: 3, dev loss: 44.718276308983874, f1 score: 0.7277605779153767
+2022-09-26 13:13:07,870:INFO: Configuration saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/config.json
+2022-09-26 13:13:09,525:INFO: Model weights saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/pytorch_model.bin
+2022-09-26 13:13:09,525:INFO: --------Save best model!--------
+2022-09-26 13:21:39,768:INFO: Epoch: 4, train loss: 23.405151381747412
+2022-09-26 13:21:51,866:INFO: Epoch: 4, dev loss: 45.675869302651314, f1 score: 0.7520677829332256
+2022-09-26 13:21:51,866:INFO: Configuration saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/config.json
+2022-09-26 13:21:53,518:INFO: Model weights saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/pytorch_model.bin
+2022-09-26 13:21:53,518:INFO: --------Save best model!--------
+2022-09-26 13:30:22,611:INFO: Epoch: 5, train loss: 18.264579515030757
+2022-09-26 13:30:34,745:INFO: Epoch: 5, dev loss: 46.017671290132185, f1 score: 0.7571780147662018
+2022-09-26 13:30:34,745:INFO: Configuration saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/config.json
+2022-09-26 13:30:37,273:INFO: Model weights saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/pytorch_model.bin
+2022-09-26 13:30:37,273:INFO: --------Save best model!--------
+2022-09-26 13:39:06,704:INFO: Epoch: 6, train loss: 14.523095333719201
+2022-09-26 13:39:18,843:INFO: Epoch: 6, dev loss: 44.59087116202128, f1 score: 0.7769443347808922
+2022-09-26 13:39:18,843:INFO: Configuration saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/config.json
+2022-09-26 13:39:20,430:INFO: Model weights saved in C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT-CRF/experiments/financial/pytorch_model.bin
+2022-09-26 13:39:20,431:INFO: --------Save best model!--------
