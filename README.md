@@ -9,7 +9,7 @@
 > ****
 >https://albert-jin.github.io/FintechKP-frontend-anonymous/
 
-If this work helps you, please cite it. Thanks!
+<!-- If this work helps you, please cite it. Thanks!
 
 ```
 @InProceedings{10.1007/978-3-031-30675-4_31,
@@ -32,4 +32,4 @@ address="Cham",
 pages="425--440",
 isbn="978-3-031-30675-4"
 }
-```
+``` -->
