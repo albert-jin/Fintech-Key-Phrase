@@ -11,10 +11,10 @@ from model import BertNER
 def information_retrieval_crf(sents, is_roberta=False):
     device = torch.device("cuda:0")
     id2label = config.id2label
-    if is_roberta:
-        model_dir = r'C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT_CRF\experiments\financial\roberta_crf'  #  './experiments/financial/roberta_crf/'
+    if is_roberta: # C:\Users\Super-IdoI\Desktop\交大\dataset-ecir\Fintech-Key-Phrase\pretrained_bert_models\chinese_roberta_wwm_large_ext
+        model_dir = r'C:\Users\Super-IdoI\Desktop\交大\dataset-ecir\Fintech-Key-Phrase\BERT_CRF\experiments\financial\roberta_crf'  #  './experiments/financial/roberta_crf/'
     else:
-        model_dir = r'C:\Users\Super-IdoI\Desktop\dataset-ecir\Fintech-Key-Phrase\BERT_CRF\experiments\financial\bert_crf'  # ./experiments/financial/bert_crf/'
+        model_dir = r'C:\Users\Super-IdoI\Desktop\交大\dataset-ecir\Fintech-Key-Phrase\BERT_CRF\experiments\financial\bert_crf'  # ./experiments/financial/bert_crf/'
     # "financial_entity": {"控制": [[10, 11]]}
     tokenizer = BertTokenizer.from_pretrained(config.roberta_model, do_lower_case=True)
     words = [list(text) for text in sents]
@@ -68,7 +68,9 @@ if __name__ == '__main__':
     texts = ["报告期内，公司积极借鉴互联网思维，依托网络平台和工具，变革房地产销售模式，在部分城市发起全民经纪人等营销创新，主动整合渠道资源，取得较好成效。向城市配套服务商转型“和城市同步发展”是公司的一贯策略。",
         "争取在四氟系列产品、吡啶类含氟化学品和三氟甲基系列化学品进行突破",
              "发展彩色网络激光打印机、扫描仪、投影仪等产品",
-             '滤波器等领域用R12K宽频、高BS、高居里温度材料（R12KB）材料开发、DM4550高性能永磁铁氧体材料”']
+             '滤波器等领域用R12K宽频、高BS、高居里温度材料（R12KB）材料开发、DM4550高性能永磁铁氧体材料”',
+             '云南省盐资源储量最大、生产成本最优的四个盐矿（昆明盐矿、一平浪盐矿、乔后盐矿和普洱制盐分公司）已是本公司的生产企业',
+             '其中3个品种获得批准，罗库溴铵注射液为全国首家通过一致性评价']
     res = information_retrieval_crf(texts, True)
     for prediction in res:
-        print(f"{prediction['sent']}\n=> 标签:\n{prediction['pred_tags']}\n=> 包含实体:{prediction['phrases']}\n\n")
+        print(f"{prediction['sent']}\n=> 标签:\n{prediction['pred_tags']}\n=> 包含实体:{prediction['phrases']}")
