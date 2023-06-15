@@ -8,7 +8,8 @@ train_new_random.json 同时用于保留 原训练集 + 数据增强的扩充训
 """
 wrong_count = 0
 extra_tokens = ['1.', '2.', '3.', '4.', '5.', "\""]  # ...
-with open('./ChatGPT_responses/answers_ChatGPT.json', mode='rt', encoding='utf-8') as inp, \
+# # ./ChatGPT_responses/answers_ChatGPT.json
+with open('./ChatGPT_responses/answers_ChatGPT_all.json', mode='rt', encoding='utf-8') as inp, \
     open('./Fintech-Key-Phrase-new/train_extra.json', mode='wt', encoding='utf-8') as oup1, \
     open('./Fintech-Key-Phrase-new/train_new.json', mode='wt', encoding='utf-8') as oup2:
     lines = inp.readlines()
@@ -36,7 +37,7 @@ with open('./ChatGPT_responses/answers_ChatGPT.json', mode='rt', encoding='utf-8
                 keyphrases_info[phrase] = collected_info
         if len(list(keyphrases_info)) != 0:
             json_row = {'text': sentence, 'label': {'financial_entity': keyphrases_info}}
-            oup2.write(json.dumps(json_row, ensure_ascii=False) + '\n')
+            # oup2.write(json.dumps(json_row, ensure_ascii=False) + '\n')  # 不用该方式存储原始示例
         else:
             print('未识别到keyphrase, 跳过.')
             wrong_count += 1
@@ -68,8 +69,12 @@ with open('./ChatGPT_responses/answers_ChatGPT.json', mode='rt', encoding='utf-8
                 else:
                     print('未识别到keyphrase, 跳过.')
                     wrong_count += 1
-
     print('未记录数', wrong_count)
+    # 用该新方式写入
+    with open('./Fintech-Key-Phrase-new/train_origin.json', mode='rt', encoding='utf-8') as inp1:
+        for line in inp1.readlines():
+            oup2.write(line)
+
 
     # 将所有数据都准备好后，打乱train_new.json写入train_new_random.json.
     with open('./Fintech-Key-Phrase-new/train_new.json', mode='rt', encoding='utf-8') as oup3, \
