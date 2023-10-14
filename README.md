@@ -2,12 +2,17 @@
 #### Fintech Key-Phrase: a New Chinese Financial &amp; High-tech Dataset Accelerating Expression-Level Information Retrieval
 
 > The Online Website is released! Enjoy the URL:
-
->https://github.com/albert-jin/FintechKP-frontend/
-> ****
+> 
+> https://github.com/albert-jin/FintechKP-frontend/
+<!-- > ****
 > **OR**
 > ****
 >https://albert-jin.github.io/FintechKP-frontend-anonymous/
+ -->
+ ****
+Note that you can also download the ChatGPT-augmented dataset directly from the following **URL**: 
+> 
+> https://github.com/albert-jin/Fintech-Key-Phrase/tree/main/Fintech-Key-Phrase/data_augment/Fintech-Key-Phrase-new
 
 <!-- If this work helps you, please cite it. Thanks!
 
